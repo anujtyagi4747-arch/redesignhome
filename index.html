@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#09251b">
+<meta name="description" content="Vishwvantara Exports Pvt Ltd — Premium Indian agricultural products for global markets.">
+
+<title>Vishwvantara Exports | From Our Roots to Your World</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --green: #09251b;
+  --green2: #103c2b;
+  --green3: #1d6244;
+  --lime: #b8dc91;
+  --white: #ffffff;
+  --cream: #f6f7f0;
+  --text: #17251c;
+  --muted: #68736b;
+  --border: rgba(255,255,255,.14);
+  --radius: 22px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(1160px, calc(100% - 40px));
+  margin: auto;
+}
+
+.section {
+  padding: 82px 0;
+}
+
+.section-dark {
+  background: var(--green);
+  color: var(--white);
+}
+
+.section-light {
+  background: var(--cream);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--green3);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: var(--lime);
+}
+
+.section-dark .eyebrow {
+  color: var(--lime);
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5vw, 49px);
+  line-height: 1.16;
+  font-weight: 600;
+  letter-spacing: -.7px;
+  margin-top: 15px;
+}
+
+.section-description {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.85;
+  margin-top: 16px;
+  max-width: 620px;
+}
+
+.section-dark .section-description {
+  color: rgba(255,255,255,.72);
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-height: 49px;
+  padding: 13px 20px;
+  border-radius: 7px;
+  border: 1px solid transparent;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .6px;
+  transition: background .25s ease,
+              color .25s ease,
+              transform .25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-primary {
+  background: var(--lime);
+  color: var(--green);
+}
+
+.btn-primary:hover {
+  background: white;
+}
+
+.btn-outline {
+  border-color: rgba(255,255,255,.48);
+  color: white;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: var(--green);
+}
+
+.topbar {
+  background: #061b13;
+  color: rgba(255,255,255,.83);
+  text-align: center;
+  padding: 9px 12px;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.topbar span {
+  color: var(--lime);
+}
+
+/* HEADER */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(9,37,27,.97);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+}
+
+.navbar {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+.logo-mark {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  border: 1px solid rgba(184,220,145,.55);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--lime);
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+}
+
+.logo-text strong {
+  display: block;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: .5px;
+}
+
+.logo-text small {
+  display: block;
+  color: var(--lime);
+  margin-top: 5px;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  font-size: 12px;
+  color: rgba(255,255,255,.82);
+  transition: color .2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--lime);
+}
+
+.nav-cta {
+  min-height: 42px;
+  padding: 10px 15px;
+  font-size: 10px;
+}
+
+.menu-toggle {
+  display: none;
+  width: 43px;
+  height: 43px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: white;
+  border-radius: 9px;
+  font-size: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  min-height: 650px;
+  background: var(--green);
+  color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,27,18,.96) 0%,
+      rgba(5,27,18,.86) 42%,
+      rgba(5,27,18,.30) 100%
+    ),
+    url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85')
+    center/cover no-repeat;
+  transform: scale(1.025);
+  animation: heroReveal 1.3s ease-out both;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border: 1px solid rgba(184,220,145,.15);
+  border-radius: 50%;
+  right: -140px;
+  bottom: -170px;
+  box-shadow: 0 0 0 40px rgba(184,220,145,.035),
+              0 0 0 80px rgba(184,220,145,.025);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-top: 85px;
+  padding-bottom: 90px;
+}
+
+.hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--lime);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: fadeUp .8s .1s both;
+}
+
+.hero-label::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--lime);
+}
+
+.hero h1 {
+  max-width: 760px;
+  margin-top: 23px;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(43px, 7.2vw, 82px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+  animation: fadeUp .8s .2s both;
+}
+
+.hero h1 em {
+  color: var(--lime);
+  font-weight: 500;
+}
+
+.hero-description {
+  max-width: 530px;
+  margin-top: 23px;
+  font-size: 15px;
+  line-height: 1.9;
+  color: rgba(255,255,255,.78);
+  animation: fadeUp .8s .35s both;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 32px;
+  animation: fadeUp .8s .5s both;
+}
+
+.hero-note {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 45px;
+  color: rgba(255,255,255,.82);
+  font-size: 11px;
+  animation: fadeUp .8s .6s both;
+}
+
+.hero-note span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-note b {
+  color: var(--lime);
+  font-size: 15px;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroReveal {
+  from {
+    opacity: .55;
+    transform: scale(1.07);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.025);
+  }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 900px) {
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero-bg {
+    background-position: 58% center;
+  }
+}
+
+@media (max-width: 680px) {
+  .container {
+    width: calc(100% - 36px);
+  }
+
+  .section {
+    padding: 61px 0;
+  }
+
+  .topbar {
+    font-size: 9px;
+    letter-spacing: 1px;
+    padding: 9px 8px;
+  }
+
+  .navbar {
+    min-height: 70px;
+    gap: 10px;
+  }
+
+  .logo {
+    gap: 8px;
+  }
+
+  .logo-mark {
+    width: 38px;
+    height: 38px;
+    font-size: 22px;
+  }
+
+  .logo-text strong {
+    font-size: 16px;
+  }
+
+  .logo-text small {
+    font-size: 8px;
+    letter-spacing: 2.5px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    height: calc(100dvh - 70px);
+    background: #09251b;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 18px 22px 35px;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity .25s ease,
+                transform .25s ease,
+                visibility .25s ease;
+  }
+
+  .nav-links.open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    font-size: 15px;
+    padding: 17px 5px;
+    border-bottom: 1px solid rgba(255,255,255,.10);
+  }
+
+  .hero {
+    min-height: 590px;
+    align-items: center;
+  }
+
+  .hero-bg {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5,27,18,.91),
+        rgba(5,27,18,.66)
+      ),
+      url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80')
+      58% center/cover no-repeat;
+  }
+
+  .hero-content {
+    padding-top: 68px;
+    padding-bottom: 65px;
+  }
+
+  .hero-label {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .hero h1 {
+    font-size: clamp(43px, 11.4vw, 61px);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-top: 20px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+    line-height: 1.85;
+    margin-top: 20px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 26px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-note {
+    gap: 12px 17px;
+    margin-top: 30px;
+    font-size: 10px;
+  }
+
+  .section-title {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    width: calc(100% - 28px);
+  }
+
+  .logo-text strong {
+    font-size: 14px;
+  }
+
+  .logo-text small {
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  FROM INDIA <span>TO THE WORLD</span> &nbsp;·&nbsp;
+  PREMIUM AGRICULTURAL EXPORTS
+</div>
+
+<header class="header">
+  <div class="container navbar">
+
+    <a href="#home" class="logo" aria-label="Vishwvantara Home">
+      <span class="logo-mark">V</span>
+
+      <span class="logo-text">
+        <strong>VISHWVANTARA</strong>
+        <small>EXPORTS</small>
+      </span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#products">Products</a>
+      <a href="#quality">Our Quality</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#contact" class="btn btn-primary nav-cta">
+      EXPORT ENQUIRY ↗
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="navLinks"
+      type="button"
+    >☰</button>
+
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+
+  <div class="container hero-content">
+
+    <div class="hero-label">
+      ROOTED IN INDIA · CONNECTED GLOBALLY
+    </div>
+
+    <h1>
+      From Our Roots<br>
+      To <em>Your World.</em>
+    </h1>
+
+    <p class="hero-description">
+      Bringing the richness of Indian agriculture to global markets.
+      Discover quality-sourced rice, ghee, spices and agricultural
+      products from Vishwvantara Exports.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#products" class="btn btn-primary">
+        EXPLORE OUR PRODUCTS <span>↗</span>
+      </a>
+
+      <a href="#contact" class="btn btn-outline">
+        BECOME A GLOBAL PARTNER
+      </a>
+    </div>
+
+    <div class="hero-note">
+      <span><b>✳</b> Quality Focused</span>
+      <span><b>✳</b> Global Supply</span>
+      <span><b>✳</b> Trusted Partnerships</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- PART 2 WILL CONTINUE HERE -->
